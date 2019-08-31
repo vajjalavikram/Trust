@@ -14,6 +14,8 @@ class UserProfile(models.Model):
    prefs = PickledObjectField(null=True)
    form_submit = models.BooleanField(blank = True,default = False)
 
+   def __str__(self):
+   	return self.user_name.name
 
 class Case(models.Model):
 	
