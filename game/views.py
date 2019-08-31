@@ -136,7 +136,7 @@ def postanswer(request):
 	user_ = UserProfile.objects.get(user_name=request.user)
 
 	if request.method == 'POST':
-		correct_an=[3,5]
+		correct_an=[3,4]
 		ans=int(request.POST['Ans'])
 		if ans==correct_an[user_.num - 8]:
 			marks=10
