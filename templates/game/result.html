@@ -1,0 +1,65 @@
+{%extends 'game/base.html'%}
+
+{% block content%}
+	{% if id < 8 %}
+		<div class="row">
+			<div class="col-md-12" style="text-align: center;">
+				<h1>Results</h1>
+			</div>
+			<div class="col-md-12" style="text-align: center;">
+				<h3>Your Preferences were in the order:</h3>
+				<br>
+				<ul>
+					{% for p in prefs %}
+					<li> {{p}} </li>
+					{%endfor%}
+				</ul>
+			</div>
+			<div class="col-md-12" style="text-align: center;">
+				<h3>The Correct Ans is:</h3>
+				<br>
+				<ul>
+					{% for c in case %}
+					<li> {{c}} </li>
+					{%endfor%}
+				</ul>
+			</div>
+<!-- 			<div class="col-md-12" style="text-align: center;">
+				<h3> Your Score for this round: {{marks}} </h3>
+			</div> -->
+			<div class="col-md-12" style="text-align: center;">
+				<h3> Final Score: {{Score}} </h3>
+			</div>
+			<div class="col-md-12" style="text-align: center;">
+				<h3> Case: {{id}} </h3>
+			</div>
+			<div class="col-md-12" style="text-align: center;">
+	            <a class="btn btn-info" href="/proceed/" id="next">Click Here for Next Round</a>
+			</div>
+		</div>
+	{% else %}
+	<div class="row">
+<!-- 		<div class="col-md-12" style="text-align: center;">
+			<h3> Your Score for this round: {{marks}} </h3>
+		</div> -->
+		<div class="col-md-12" style="text-align: center;">
+			<h3> Final Score: {{Score}} </h3>
+		</div>
+		<div class="col-md-12" style="text-align: center;">
+            <a class="btn btn-info" href="/quesproceed" id="next">Click Here for Next Round</a>
+		</div>
+
+	</div>
+	{% endif %}
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+			<p class="alert alert-info" style="text-align: center;"><strong>Solution for the Level</strong></p>
+		</div>
+		<div class="col-md-12" style="text-align: center;">
+			{{solutions}}
+		</div>
+	</div>
+
+{% endblock content%}
+
