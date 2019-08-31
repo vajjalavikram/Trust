@@ -233,7 +233,7 @@ Many thanks again!
 		console.log('hi');
 
 		checkInput();
-
+	
 		jQuery.ajax({
 			type: "POST",
 			url: '{%url 'postresult'%}',
@@ -254,6 +254,7 @@ Many thanks again!
 			}
 		});
 	}
+	
 
 	function checkInput() {
 		console.log("For Fuck's sake!");
@@ -264,10 +265,8 @@ Many thanks again!
 					console.log("Yash! Stop being soo Dumb" + $("#p" + i.toString()).value);
 					alert("Please fill the rank as consecutive numbers");
 					break;
-					// return false;
 				}
 			}
-
 		}
 
 	}
